@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import Color from './color'
 
 const Color_list = (props, {store}) =>{
 	const {colors,sort} = store.getState()

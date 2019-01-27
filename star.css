@@ -1,4 +1,21 @@
+*{
+	padding:0px;
+	margin:0px;
+}
 
+div.star-rating{
+	margin:0px auto;
+}
+div.color{
+	width:200px;
+	height: 50px;
+}
+section.color-section{
+	padding:10px;
+	border:1px solid gray;
+	height: 120px;
+	width:200px;
+}
 .star{
 	cursor:pointer;
 	height:25px;
