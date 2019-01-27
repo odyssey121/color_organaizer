@@ -1,11 +1,9 @@
-
+import Color_form from './color-form'
 
 
 const App = () =>
 	<div className="app">
-		<Sort_menu  />
 		<Color_form  />
-		<Color_list  />
 	</div>
 
 
