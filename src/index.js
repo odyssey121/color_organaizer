@@ -9,6 +9,7 @@ const target = document.getElementById('root')
 
 const store = storeFactory()
 
+
 class Provider extends React.Component{
 	getChildContext(){
 		return {
@@ -20,5 +21,4 @@ class Provider extends React.Component{
 		return children
 	}
 
-}
 
