@@ -28,7 +28,7 @@ export const color = (state = {}, action) =>{
 				title:action.title,
 				color:action.color,
 				rating:action.rating,
-				timestamp:action.timestamp
+				date:action.date
 			}
 
 		case C.RATE_COLOR:
@@ -44,7 +44,7 @@ export const color = (state = {}, action) =>{
 	}	
 }
 
-export const sort = (state = 'SORT_BY_DATE', action) =>{
+export const sort = (state = 'date', action) =>{
 	switch (action.type){
 		case C.SORT_COLORS:
 			return action.sortBy

@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types'
 import Color from './color'
+import customSort from './func-helpers'
 
 const Color_list = (props, {store}) =>{
 	const {colors,sort} = store.getState()
+	const sortColors = [...colors].sort(customSort(sort))
 	return (
 			<section id='color-list'>
-			{(colors.lenght == 0)?
+			{(sortColors.lenght == 0)?
 				<p> Not colors yet </p> :
 				<div className='color-list'>
-					{colors.map((color, i) =>
+					{sortColors.map((color, i) =>
 							<Color key={color.id} {...color}/>
 							)}
 				</div>}

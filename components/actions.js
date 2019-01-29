@@ -8,7 +8,7 @@ export const add_color = (title,color) => (
 		title:title,
 		color:color,
 		rating:0,
-		timestamp:new Date().getTime()
+		date:new Date().getTime()
 	}
 	)
 
@@ -27,24 +27,13 @@ export const remove_color = (id) =>(
 	}
 	)
 
-const sort_color = (sort) =>{
-	switch (sort){
-		case 'title':
-		return {
-			type:C.SORT_COLORS,
-			sortBy:'SORT_BY_TITLE'
-		}
-		case 'date':
-		return {
-			type:C.SORT_COLORS,
-			sortBy:'SORT_BY_DATE'
-		}
-		case 'rating':
-		return {
-			type:C.SORT_COLORS,
-			sortBy:'SORT_BY_RATING'
-		}
-
+const sort_color = (sort) => (
+	{
+		type:C.SORT_COLORS,
+		sortBy:sort
 	}
-}
+	)
+
 export default sort_color
+
+

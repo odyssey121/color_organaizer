@@ -8,7 +8,7 @@ class Color extends Component{
 		const {store} = this.context
 		const {id, title, color, rating, timestamp} = this.props
 		return(
-				<section className='color-section' style={this.style}>
+				<div className='color-section' style={this.style}>
 					<h1 ref='title'>{title}</h1>
 					<button onClick={() => store.dispatch(
 						remove_color(id))}>X</button>
@@ -16,7 +16,7 @@ class Color extends Component{
 					</div>
 					<Star_rating starsSelected={rating}
 					onRate={rating=>store.dispatch(rate_color(id,rating))}/>
-				</section>
+				</div>
 			)
 	}
 

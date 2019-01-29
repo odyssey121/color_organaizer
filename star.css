@@ -1,21 +1,3 @@
-*{
-	padding:0px;
-	margin:0px;
-}
-
-div.star-rating{
-	margin:0px auto;
-}
-div.color{
-	width:200px;
-	height: 50px;
-}
-section.color-section{
-	padding:10px;
-	border:1px solid gray;
-	height: 120px;
-	width:200px;
-}
 .star{
 	cursor:pointer;
 	height:25px;
@@ -35,12 +17,23 @@ section.color-section{
 		0% 38%,
 		37% 38%);
 }
-
+.color{
+	height:40px;
+}
 .selected{
 	background-color:red;
 }
-.color-div{
-	height:50px;
-	width:200px;
-	padding:10px;
+/*.app{
+	display:flex;
+	flex-direction: row-reverse;
+
+}*/
+.color-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.color-section{
+	padding: 0 5px;
+	border:1px solid black;
 }

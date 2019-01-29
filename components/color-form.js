@@ -7,7 +7,7 @@ const Color_form = function (props, {store}) {
 		e.preventDefault()
 		store.dispatch(action.add_color(_title.value,_color.value))
 		_title.value = ''
-		_color.value = '#00000'
+		_color.value = '#000000'
 		_title.focus()
 	}
 	return(
