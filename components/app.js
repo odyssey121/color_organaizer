@@ -1,14 +1,10 @@
-import Color_form from './color-form'
-import Color_list from './color-list'
-import Color_order from './color-order'
-
+import {NewColor,MenuSort,Colors} from './containers'
 
 const App = () =>
 	<div className="app">
-		<Color_form  />
-		<Color_order />
-		<Color_list />
+		<NewColor />
+		<MenuSort />
+		<Colors />
 	</div>
-
 
 export default App

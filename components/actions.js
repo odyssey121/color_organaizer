@@ -27,13 +27,13 @@ export const remove_color = (id) =>(
 	}
 	)
 
-const sort_color = (sort) => (
+export const sort_color = (sort) => (
 	{
 		type:C.SORT_COLORS,
 		sortBy:sort
 	}
 	)
 
-export default sort_color
+
 
 

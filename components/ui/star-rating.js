@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 
 const Star = ({selected = true, onClick = f=>f}) =>
-	<div className={(selected)? 'star selected': 'star'} onClick = {onClick}>
+	<div className={(selected)? 'star selected': 'star'} 
+	onClick = {onClick}>
 	</div>
 
 
@@ -13,7 +14,8 @@ Star.propTypes = {
 const Star_rating = ({totalStars=5, starsSelected=0, onRate=f=>f}) =>
 	<div className='star-rating'>
 		{[...Array(totalStars)].map((elem,i) =>
-			<Star key={i} selected={i<starsSelected} onClick={()=>onRate(i+1)} />
+			<Star key={i} selected={i<starsSelected}
+			onClick={()=>onRate(i+1)} />
 		)}
 	</div>
 

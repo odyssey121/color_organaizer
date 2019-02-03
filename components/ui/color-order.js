@@ -1,12 +1,8 @@
-import sort_color from './actions'
-import PropTypes from 'prop-types'
-
-const Color_order = (props, {store}) =>{
-	const {sort} = store.getState()
+const Color_order = ({selected=f=>f}) =>{
 	const Change = (e) => {
 		e.preventDefault()
 		let target = e.target
-		store.dispatch(sort_color(target.value))
+		selected(target.value)
 	}
 	return(
 			<div className='option-sort'>
@@ -17,10 +13,6 @@ const Color_order = (props, {store}) =>{
 				</select>
 			</div>
 	)
-}
-
-Color_order.contextTypes = {
-	store:PropTypes.object
 }
 
 export default Color_order

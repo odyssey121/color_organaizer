@@ -1,11 +1,9 @@
-import * as action from './actions'
-import PropTypes from 'prop-types'
 
-const Color_form = function (props, {store}) {
+const Color_form = ({addColor=f=>f}) =>{
 	let _title,_color
 	const submit = e =>{
 		e.preventDefault()
-		store.dispatch(action.add_color(_title.value,_color.value))
+		addColor(_title.value, _color.value)
 		_title.value = ''
 		_color.value = '#000000'
 		_title.focus()
@@ -17,10 +15,6 @@ const Color_form = function (props, {store}) {
 			<button> add </button>
 		</form>
 		)
-}
-
-Color_form.contextTypes = {
-	store:PropTypes.object
 }
 
 export default Color_form

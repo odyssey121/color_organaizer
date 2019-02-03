@@ -1,40 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import {Provider} from 'react-redux'
 import {render} from 'react-dom'
+import storeFactory from '../store/storeFactory'
 import App from '../components/app'
 import '../star.css'
-import storeFactory from '../store/storeFactory'
+import React from 'react'
 
 window.React = React
+
 const target = document.getElementById('root')
-
 const store = storeFactory()
-
-class Provider extends React.Component{
-	getChildContext(){
-		return {
-			store:this.props.store
-		}
-	}
-	componentWillMount(){
-		this.unsubscribe = store.subscribe(
-			() => this.forceUpdate()
-			)
-	}
-	componenWillUnmount(){
-		this.unsubscribe()
-	}
-	render(){
-		const {children} = this.props
-		return children
-	}
-}
-Provider.childContextTypes = {
-	store:PropTypes.object.isRequired
-}
-Provider.propTypes = {
-	store:PropTypes.object.isRequired
-}
 
 render(
 	<Provider store={store}>
@@ -42,6 +16,3 @@ render(
 	</Provider>,
 	target
 	)
-
-
-
